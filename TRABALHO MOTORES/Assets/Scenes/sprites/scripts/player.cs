@@ -5,7 +5,7 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
    public float velocidade = 10f;
-     public float focaPulo = 10f;
+     public float focaPulo = 20f;
    
        public bool noChao = false;
      
@@ -18,7 +18,9 @@ public class player : MonoBehaviour
            _rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
       }
-   void OnCollisionStay2D(Collision2D collision)
+
+    void OnCollisionStay2D(Collision2D collision)
+    
     {
         if (collision.gameObject.tag == "chao")
         {
