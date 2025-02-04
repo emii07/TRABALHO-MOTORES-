@@ -50,16 +50,14 @@ public class player : MonoBehaviour
             gameObject.transform.position += new Vector3(velocidade*Time.deltaTime,0,0);
             spriteRenderer.flipX = false;
             Debug.Log("RightArrow");
-            if (Input.GetKeyDown(KeyCode.Space) && noChao == true)
-            {
-                _rigidbody2D.AddForce(new Vector2(0, 1) * focaPulo,ForceMode2D.Impulse);
+           
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Space) && noChao == true)
+        {
+            _rigidbody2D.AddForce(new Vector2(0, 1) * focaPulo,ForceMode2D.Impulse);
 
-                Debug.Log("Jump");
-            }
-
-     
-
-
+            Debug.Log("Jump");
         }
     }
 }     
